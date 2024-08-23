@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.DataAccessLayer.EntityFramework
 {
-    internal class EfStaffDal:GenericRepository<Staff>, IStaffDal
+    public class EfStaffDal:GenericRepository<Staff>, IStaffDal
     {
         public EfStaffDal(Context context) : base(context)
         {
