@@ -1,5 +1,5 @@
 ﻿using HotelProject.BusinessLayer.Abstarct;
-using HotelProject.EntitiyLayer.Concrete;
+using HotelProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

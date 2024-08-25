@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using HotelProject.DtoLayer.Dtos.RoomDto;
-using HotelProject.EntitiyLayer.Concrete;
+using HotelProject.EntityLayer.Concrete;
 
 namespace HotelProject.WebApi.Mapping
 {

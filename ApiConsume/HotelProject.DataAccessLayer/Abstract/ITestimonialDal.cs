@@ -1,4 +1,4 @@
-﻿using HotelProject.EntitiyLayer.Concrete;
+﻿using HotelProject.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;

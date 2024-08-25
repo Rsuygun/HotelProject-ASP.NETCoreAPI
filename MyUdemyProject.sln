@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDoList", "ToDoList", "{C7
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.WebApi", "ApiConsume\HotelProject.WebApi\HotelProject.WebApi.csproj", "{765A983A-CBBA-4B7F-8413-7C4189337C6B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.EntitiyLayer", "ApiConsume\HotelProject.EntitiyLayer\HotelProject.EntitiyLayer.csproj", "{40EE48E6-FA19-417C-AB2D-C587B2E804F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.EntityLayer", "ApiConsume\HotelProject.EntitiyLayer\HotelProject.EntityLayer.csproj", "{40EE48E6-FA19-417C-AB2D-C587B2E804F1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.DataAccessLayer", "ApiConsume\HotelProject.DataAccessLayer\HotelProject.DataAccessLayer.csproj", "{B40613C3-EFAA-4B9B-8E9E-39E88CA72AF5}"
 EndProject

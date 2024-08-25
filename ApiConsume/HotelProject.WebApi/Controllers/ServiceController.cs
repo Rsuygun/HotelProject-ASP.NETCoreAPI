@@ -1,5 +1,5 @@
 ﻿using HotelProject.BusinessLayer.Abstarct;
-using HotelProject.EntitiyLayer.Concrete;
+using HotelProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,7 +30,7 @@ namespace HotelProject.WebApi.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteService(int id)
         {
             var values = _serviceService.TGetByID(id);
