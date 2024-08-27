@@ -1,5 +1,6 @@
 using AutoMapper;
 using HotelProject.BusinessLayer.Abstarct;
+using HotelProject.BusinessLayer.Abstract;
 using HotelProject.BusinessLayer.Concrete;
 using HotelProject.DataAccessLayer.Abstract;
 using HotelProject.DataAccessLayer.Concrete;
@@ -31,6 +32,9 @@ builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
 
 builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
 builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
+
+builder.Services.AddScoped<IAboutDal, EfAboutDal>();
+builder.Services.AddScoped<IAboutService, AboutManager>();
 
 var mapperConfig = new MapperConfiguration(mc =>
 {
