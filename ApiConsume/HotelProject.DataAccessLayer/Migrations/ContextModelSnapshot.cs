@@ -174,6 +174,12 @@ namespace HotelProject.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("Checkin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Checkout")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ChildCount")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

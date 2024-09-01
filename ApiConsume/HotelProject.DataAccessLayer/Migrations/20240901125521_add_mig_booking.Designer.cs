@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240830204831_add_mig_booking")]
+    [Migration("20240901125521_add_mig_booking")]
     partial class add_mig_booking
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -175,6 +175,12 @@ namespace HotelProject.DataAccessLayer.Migrations
                     b.Property<string>("AdultCount")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Checkin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Checkout")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("ChildCount")
                         .IsRequired()

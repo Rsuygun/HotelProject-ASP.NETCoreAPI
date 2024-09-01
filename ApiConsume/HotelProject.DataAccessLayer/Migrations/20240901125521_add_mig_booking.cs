@@ -78,6 +78,8 @@ namespace HotelProject.DataAccessLayer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Mail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Checkin = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Checkout = table.Column<DateTime>(type: "datetime2", nullable: false),
                     AdultCount = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ChildCount = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RoomCount = table.Column<string>(type: "nvarchar(max)", nullable: false),
