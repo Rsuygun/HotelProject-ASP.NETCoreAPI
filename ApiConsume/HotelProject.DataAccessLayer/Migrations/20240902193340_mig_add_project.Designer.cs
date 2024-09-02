@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240901125521_add_mig_booking")]
-    partial class add_mig_booking
+    [Migration("20240902193340_mig_add_project")]
+    partial class mig_add_project
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -213,6 +213,31 @@ namespace HotelProject.DataAccessLayer.Migrations
                     b.HasKey("BookingID");
 
                     b.ToTable("Bookings");
+                });
+
+            modelBuilder.Entity("HotelProject.EntityLayer.Concrete.Guest", b =>
+                {
+                    b.Property<int>("GuestID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GuestID"), 1L, 1);
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("GuestID");
+
+                    b.ToTable("Guests");
                 });
 
             modelBuilder.Entity("HotelProject.EntityLayer.Concrete.Room", b =>

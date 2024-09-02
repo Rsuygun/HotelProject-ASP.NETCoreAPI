@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HotelProject.DataAccessLayer.Migrations
 {
-    public partial class add_mig_booking : Migration
+    public partial class mig_add_project : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -90,6 +90,21 @@ namespace HotelProject.DataAccessLayer.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Bookings", x => x.BookingID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Guests",
+                columns: table => new
+                {
+                    GuestID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Guests", x => x.GuestID);
                 });
 
             migrationBuilder.CreateTable(
@@ -341,6 +356,9 @@ namespace HotelProject.DataAccessLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "Bookings");
+
+            migrationBuilder.DropTable(
+                name: "Guests");
 
             migrationBuilder.DropTable(
                 name: "Rooms");
