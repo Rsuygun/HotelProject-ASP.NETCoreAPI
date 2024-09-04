@@ -1,6 +1,6 @@
 ﻿namespace HotelProject.WebUI.Dtos.RoomDto
 {
-    public class ResultRoomDto
+    public class UpdateRoomDto
     {
         public int RoomID { get; set; }
         public string RoomNumber { get; set; }
@@ -11,7 +11,7 @@
         public string BathCount { get; set; }
         public string Wifi { get; set; }
         public string Description { get; set; }
-        public ResultRoomDto()
+        public UpdateRoomDto()
         {
             Wifi = string.Empty;
         }
