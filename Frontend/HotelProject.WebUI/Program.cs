@@ -1,19 +1,25 @@
 using AutoMapper;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using HotelProject.DataAccessLayer.Concrete;
 using HotelProject.EntityLayer.Concrete;
+using HotelProject.WebUI.Dtos.GuestDto;
 using HotelProject.WebUI.Mapping;
+using HotelProject.WebUI.ValidaitonRules.GuestValidationRules;
 using Newtonsoft.Json.Converters;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IValidator<CreateGuestDto>, CreateGuestValidator>();
+builder.Services.AddTransient<IValidator<UpdateGuestDto>, UpdateGuestValidator>();
+
+builder.Services.AddControllersWithViews().AddFluentValidation();
 
 builder.Services.AddHttpClient();
 
 builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
-
 
 var mapperConfig = new MapperConfiguration(mc =>
 {
