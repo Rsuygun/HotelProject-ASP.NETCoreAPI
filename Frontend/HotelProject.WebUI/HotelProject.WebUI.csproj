@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <Folder Include="ValidaitonRules\RoomValidationRules\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>
