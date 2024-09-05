@@ -1,4 +1,5 @@
-﻿using HotelProject.BusinessLayer.Abstract;
+﻿using HotelProject.BusinessLayer.Abstarct;
+using HotelProject.BusinessLayer.Abstract;
 using HotelProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,20 @@ namespace HotelProject.WebApi.Controllers
             contact.Date = Convert.ToDateTime(DateTime.Now.ToString());
             _contactService.TInsert(contact);
             return Ok();
+        }
+
+        [HttpGet]
+        public IActionResult InboxListContact()
+        {
+            var values = _contactService.TGetList();
+            return Ok(values);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetSendMessage(int id)
+        {
+            var values = _contactService.TGetByID(id);
+            return Ok(values);
         }
     }
 }

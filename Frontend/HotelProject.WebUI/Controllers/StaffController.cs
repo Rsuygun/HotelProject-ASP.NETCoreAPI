@@ -55,6 +55,7 @@ namespace HotelProject.WebUI.Controllers
             }
             return View();
         }
+
         [HttpGet]
         public async Task<IActionResult> UpdateStaff(int id)
         {
@@ -68,6 +69,7 @@ namespace HotelProject.WebUI.Controllers
             }
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> UpdateStaff(UpdateStaffViewModel model)
         {
