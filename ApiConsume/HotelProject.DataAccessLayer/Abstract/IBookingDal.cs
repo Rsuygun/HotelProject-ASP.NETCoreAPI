@@ -13,6 +13,8 @@ namespace HotelProject.DataAccessLayer.Abstract
         void BookingStatusChangeApproved2(int id);
         int GetBookingCount();
         List<Booking> Last6Bookings();
+        void BookingStatusChangeCancel(int id);
+        void BookingStatusChangeWait(int id);
        
     }
 }
